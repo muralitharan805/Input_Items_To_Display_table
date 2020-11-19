@@ -7,7 +7,7 @@ export class infotable extends Component {
 
      
       <div > 
-        <Table striped bordered hover>
+        <Table striped bordered hover >
   <thead>
     <tr>
       <th>Name</th>
@@ -21,8 +21,10 @@ export class infotable extends Component {
           return (
             <tr key={indec.toString()}>
               <td>{ele.Name}</td>
-              <td>{ele.City}</td>
-              <td>{ele.Age}</td>
+              <td>{ele.city}</td>
+              <td>{ele.age}</td>
+              <td><Button onClick={()=>this.props.handleUpdate(ele)}>Edite</Button></td>
+              <td><Button onClick={()=>this.props.handleDelete(ele)}>Delete</Button></td>
             </tr>
           )
         })

@@ -16,17 +16,19 @@ export class Formc extends Component {
             name="Name" onChange={this.props.handleOnchange} value={this.props.datapass.Name}/>
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>City</Form.Label>
-            <Form.Control type="text" placeholder="Enter City Name" 
-            name="City" onChange={this.props.handleOnchange} value={this.props.datapass.City}/>
+            <Form.Label>Age</Form.Label>
+            <Form.Control type="text" placeholder="Enter Age" 
+            name="Age" onChange={this.props.handleOnchange} value={this.props.datapass.Age}/>
           </Form.Group> 
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Age</Form.Label>
-            <Form.Control type="text" placeholder="Enter Your Age"
-            name="Age" onChange={this.props.handleOnchange} value={this.props.datapass.Age} />
+            <Form.Label>City</Form.Label>
+            <Form.Control type="text" placeholder="Enter City"
+            name="City" onChange={this.props.handleOnchange} value={this.props.datapass.City} />
           </Form.Group> 
           <Button variant="primary" type="submit">
-            Submit
+            {
+              this.props.isCheck ? "Submit" : "Update"
+            }
           </Button>
         </Form>
         
